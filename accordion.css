@@ -1,0 +1,21 @@
+.content {
+    display: none;
+    padding: 20px;
+    font-size: 18px;
+    border: 1px solid darkslategray;
+}
+
+.main {
+    font-size: 22px;
+    background-color: rgb(255, 250, 205);
+    cursor: pointer;
+    margin: 10px;
+    padding: 10px;
+}
+
+.active {
+    background-color: rgb(240, 240, 255);
+    display: block;
+    border: 0;
+    margin: 10px;
+}

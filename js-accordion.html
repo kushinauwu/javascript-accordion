@@ -1,30 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tic Tac Toe game">
+    <meta name="author" content="kushinauwu">
+    <link rel="stylesheet" href="accordion.css">
+    <script src="accordion.js"></script>
     <title>Javascript Accordion</title>
-    <style>
-        .content {
-            display: none;
-            padding: 20px;
-            font-size: 18px;
-            border: 1px solid darkslategray;
-        }
-
-        .main {
-            font-size: 22px;
-            background-color: rgb(255, 250, 205);
-            cursor: pointer;
-            margin: 10px;
-            padding: 10px;
-        }
-
-        .active {
-            background-color: rgb(240, 240, 255);
-            display: block;
-            border: 0;
-            margin: 10px;
-        }
-    </style>
 </head>
 
 <body>
@@ -40,32 +23,4 @@
     <div class="main">Hero's Bridge</div>
     <div class="content">With the demon fox's power Naruto is easily able to defeat Haku. When Haku's mask breaks away, however, Naruto is unable to bring himself to kill the young boy beneath the mask. Elsewhere, Kakashi and Zabuza do battle. As Kakashi is about to kill Zabuza with his Lightning Blade, Haku takes the attack, saving Zabuza at the cost of his own life. Despite this turn of events Kakashi is still able to disable Zabuza, prompting the arrival of Zabuza's employer, Gato. When Gato orders his own personal army of thugs to kill Zabuza along with Tazuna and Team 7, Zabuza uses the last of his strength to kill Gato, avenging Haku's death before dying himself. With their mission complete, Team 7 and a revived Sasuke return to Konoha. Soon after returning home, Naruto, Sasuke, and Sakura are entered into the Chunin Exams, a chance for them to rise up the ninja ranks and test their abilities.</div>
 </body>
-<script>
-    /* select all elements with claass main and cotent and save in respectively named constants */
-    const mainElement = document.querySelectorAll(".main");
-    const contentElement = document.querySelectorAll(".content");
-
-    /* loop till all elements of mainElement are done*/
-    for (let x = 0; x < mainElement.length; x++) {
-
-        /* listen for onClick event and run an anonymous function */
-        mainElement[x].addEventListener("click", function() {
-            /*return next sibling element of same type , in this case, the next div ie the content*/
-            console.log(mainElement[x].nextElementSibling);
-
-            /* Clear active in case any div is already active. make next sibling class active on clicking, i.e show it. Display was set to none by default.*/
-            clearActive();
-            mainElement[x].nextElementSibling.classList.toggle("active");
-        });
-
-    }
-
-    /* clears active class on click*/
-    function clearActive() {
-        /* loop through each elemnt in contentElement */
-        for (let x = 0; x < contentElement.length; x++) {
-            contentElement[x].classList.remove("active");
-        }
-    }
-</script>
 </html>
